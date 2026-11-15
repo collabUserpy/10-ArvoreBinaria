@@ -152,5 +152,17 @@ int elementosArvore(NO* no)
 
 void exibirElementosArvore(NO* no)
 {
-	
+
+	 // (Base de indicação do slide) 
+	 // Caso base: ?
+	if (no == NULL) {
+		cout << "Sua arvore esta vazia, adicione um no" << endl;
+		return;
+	}
+	// Processar subárvore esquerda
+	exibirElementosArvore(no->esq);
+	// Processar nó atual (exibir valor)
+	cout << no->valor << endl;
+	// Processar subárvore direita
+	exibirElementosArvore(no->dir);
 }
